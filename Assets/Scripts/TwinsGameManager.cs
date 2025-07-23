@@ -18,7 +18,6 @@ public class TwinsGameManager : MonoBehaviour
     [SerializeField] private Transform cardGrid;
     [SerializeField] private GridLayoutGroup gridLayout;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private AudioSource audioSource;
 
     [Header("Card Settings")]
     [SerializeField] private List<Sprite> cardSprites;
@@ -188,13 +187,6 @@ public class TwinsGameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    private void PlaySound(AudioClip clip)
-    {
-        if (audioSource && clip)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
 
     private void NextLevel()
     {
